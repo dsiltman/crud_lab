@@ -1,0 +1,29 @@
+<%= form_for(@gallion) do |f| %>
+  <% if @gallion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gallion.errors.count, "error") %> prohibited this gallion from being saved:</h2>
+
+      <ul>
+      <% @gallion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.date_select :year %>
+  </div>
+  <div class="field">
+    <%= f.label :model_number %><br />
+    <%= f.text_field :model_number %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_name %><br />
+    <%= f.text_field :ship_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<%= form_for(@cannon) do |f| %>
+  <% if @cannon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cannon.errors.count, "error") %> prohibited this cannon from being saved:</h2>
+
+      <ul>
+      <% @cannon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :balls %><br />
+    <%= f.text_field :balls %>
+  </div>
+  <div class="field">
+    <%= f.label :kegs_of_powder %><br />
+    <%= f.text_field :kegs_of_powder %>
+  </div>
+  <div class="field">
+    <%= f.label :fuse_quantity %><br />
+    <%= f.text_field :fuse_quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :id_number %><br />
+    <%= f.text_field :id_number %>
+  </div>
+  <div class="field">
+    <%= f.label :gallion_id %><br />
+    <%= f.text_field :gallion_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Year:</b>
+  <%= @gallion.year %>
+</p>
+
+<p>
+  <b>Model number:</b>
+  <%= @gallion.model_number %>
+</p>
+
+<p>
+  <b>Ship name:</b>
+  <%= @gallion.ship_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_gallion_path(@gallion) %> |
+<%= link_to 'Back', gallions_path %>

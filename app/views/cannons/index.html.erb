@@ -1,0 +1,31 @@
+<h1>Listing cannons</h1>
+
+<table>
+  <tr>
+    <th>Balls</th>
+    <th>Kegs of powder</th>
+    <th>Fuse quantity</th>
+    <th>Id number</th>
+    <th>Gallion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cannons.each do |cannon| %>
+  <tr>
+    <td><%= cannon.balls %></td>
+    <td><%= cannon.kegs_of_powder %></td>
+    <td><%= cannon.fuse_quantity %></td>
+    <td><%= cannon.id_number %></td>
+    <td><%= cannon.gallion_id %></td>
+    <td><%= link_to 'Show', cannon %></td>
+    <td><%= link_to 'Edit', edit_cannon_path(cannon) %></td>
+    <td><%= link_to 'Destroy', cannon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cannon', new_cannon_path %>

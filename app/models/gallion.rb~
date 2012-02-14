@@ -1,0 +1,2 @@
+class Gallion < ActiveRecord::Base
+end

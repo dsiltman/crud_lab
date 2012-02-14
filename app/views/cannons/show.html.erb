@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Balls:</b>
+  <%= @cannon.balls %>
+</p>
+
+<p>
+  <b>Kegs of powder:</b>
+  <%= @cannon.kegs_of_powder %>
+</p>
+
+<p>
+  <b>Fuse quantity:</b>
+  <%= @cannon.fuse_quantity %>
+</p>
+
+<p>
+  <b>Id number:</b>
+  <%= @cannon.id_number %>
+</p>
+
+<p>
+  <b>Gallion:</b>
+  <%= @cannon.gallion_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_cannon_path(@cannon) %> |
+<%= link_to 'Back', cannons_path %>

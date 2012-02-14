@@ -1,0 +1,27 @@
+<h1>Listing gallions</h1>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Model number</th>
+    <th>Ship name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gallions.each do |gallion| %>
+  <tr>
+    <td><%= gallion.year %></td>
+    <td><%= gallion.model_number %></td>
+    <td><%= gallion.ship_name %></td>
+    <td><%= link_to 'Show', gallion %></td>
+    <td><%= link_to 'Edit', edit_gallion_path(gallion) %></td>
+    <td><%= link_to 'Destroy', gallion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gallion', new_gallion_path %>
